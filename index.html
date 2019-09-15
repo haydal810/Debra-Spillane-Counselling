@@ -8,6 +8,13 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_X0OwR2tzuB1exMe5lPFct");
+		})();
+	</script>
 </head>
 
 <body class="is-preload">
@@ -97,20 +104,25 @@
 
 			<!-- Contact -->
 			<article id="contact">
-				<h2 class="major">Contact me</h2>
-				<form method="post" action="#">
+				<h3 class="major">Contact me</h3>
+				<form onsubmit="return sendMail(this);" method="POST">
 					<div class="fields">
 						<div class="field half">
 							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
+							<input type="text" name="name" id="name" placeholder="Your Full Name" required />
 						</div>
 						<div class="field half">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="email" />
+							<input type="email" name="emailaddress" id="email" placeholder="Your Email address" required />
+						</div>
+						<div class="field half">
+							<label for="phone">Phone Number</label>
+							<input type="text" name="phone" id="phone" placeholder="Your Phone Number" required />
 						</div>
 						<div class="field">
 							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="4"></textarea>
+							<textarea name="message" id="message" rows="4" placeholder="Type your message here"
+								required></textarea>
 						</div>
 					</div>
 					<ul class="actions">
@@ -118,7 +130,7 @@
 						<li><input type="reset" value="Reset" /></li>
 					</ul>
 				</form>
-				
+
 			</article>
 
 			<!-- About -->
@@ -128,11 +140,11 @@
 				<ul class="icons">
 					<li><a target="_blank" href="https://www.facebook.com/Debra-Hayden-Counselling-330265124330652/"
 							class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							
+
 					<li><a target="_blank" href="https://www.instagram.com/debrahaydentherapy/"
 							class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							
-				</ul>			
+
+				</ul>
 			</article>
 
 		</div>
@@ -154,6 +166,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/sendEmail.js"></script>
 
 </body>
 
