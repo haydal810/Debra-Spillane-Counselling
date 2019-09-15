@@ -9,11 +9,11 @@ function sendMail(contact) {
             function (response) {
                 console.log("SUCCESS", response);
                 setTimeout("location.href = '#contact_after_submit';", 250); // the user will know that their message was sent successfully and is given feedback.
-
+                document.getElementById("client_form").reset() // the form is reset after submit button is hit
             },
             function (error) {
                 console.log("FAILED", error);
             }
         );
-    return false; // To block from loading a new page, this was originally in the tutorial notes.
+    return false; // To block from loading a new page...
 }
