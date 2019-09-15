@@ -8,11 +8,11 @@
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js">
-	</script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 	<script type="text/javascript">
 		(function () {
 			emailjs.init("user_X0OwR2tzuB1exMe5lPFct");
+
 		})();
 	</script>
 </head>
@@ -37,7 +37,7 @@
 				<ul>
 					<li><a href="#intro">About</a></li>
 					<li><a href="#work">What is Counselling ?</a></li>
-					<li><a href="#about">How I can help you</a></li>
+					<li><a href="#about">How can I help you</a></li>
 					<li><a href="#blog">Blog & Posts</a></li>
 					<li><a href="#contact">Contact me</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
@@ -81,18 +81,7 @@
 
 			<!-- About -->
 			<article id="about">
-				<h3 class="major">How I can help you</h3>
-				<span class="image main"><img src="images\2peopletalk.jpg" alt="" /></span>
-				<p>We can talk about what is troubling you, consectetur et adipiscing elit. Praesent eleifend dignissim
-					arcu, at
-					eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula
-					lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada
-					fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum
-					dolor sit amet.</p>
-			</article>
-			<!-- About -->
-			<article id="about">
-				<h3 class="major">Blog & Posts</h3>
+				<h3 class="major">How can I help you</h3>
 				<span class="image main"><img src="images\2peopletalk.jpg" alt="" /></span>
 				<p>We can talk about what is troubling you, consectetur et adipiscing elit. Praesent eleifend dignissim
 					arcu, at
@@ -102,7 +91,8 @@
 					dolor sit amet.</p>
 			</article>
 
-			<!-- Contact -->
+
+			<!-- Contact Form -->
 			<article id="contact">
 				<h3 class="major">Contact me</h3>
 				<form onsubmit="return sendMail(this);" method="POST">
@@ -113,7 +103,8 @@
 						</div>
 						<div class="field half">
 							<label for="email">Email</label>
-							<input type="email" name="emailaddress" id="email" placeholder="Your Email address" required />
+							<input type="email" name="emailaddress" id="emailaddress" placeholder="Your Email address"
+								required />
 						</div>
 						<div class="field half">
 							<label for="phone">Phone Number</label>
@@ -130,7 +121,12 @@
 						<li><input type="reset" value="Reset" /></li>
 					</ul>
 				</form>
+			</article>
 
+			<!-- Contact AFTER message submit -->
+			<article id="contact_after_submit">
+				<h3 class="major">Message Sent!</h3>
+				<p>Thank you for your message. I will be in touch soon.</p>
 			</article>
 
 			<!-- About -->
@@ -161,12 +157,12 @@
 	<div id="bg"></div>
 
 	<!-- Scripts -->
+	<script src="assets/js/sendEmail.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script src="assets/js/sendEmail.js"></script>
 
 </body>
 
