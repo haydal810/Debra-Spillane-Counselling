@@ -1661,3 +1661,9 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Web Labs' customised CSS */
+
+.underline_text {
+text-decoration: underline;
+}
