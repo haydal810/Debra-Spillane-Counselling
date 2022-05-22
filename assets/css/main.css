@@ -1667,3 +1667,17 @@ input, select, textarea {
 .underline_text {
 text-decoration: underline;
 }
+
+/* Web Labs' customised CSS  - amendments 22-05-2022*/
+
+/* Centre About Me Image*/
+
+#about {
+	text-align: center;
+	
+}
+
+#about p {
+	text-align: left;
+	
+}
