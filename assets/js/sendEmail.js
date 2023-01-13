@@ -14,6 +14,7 @@ function sendMail(contact) {
             function (error) {
                 console.log("FAILED", error);
                 setTimeout("location.href = '#contact_after_submit_error';", 10);
+                alert("Error");
             }
         );
     return false; // To block from loading a new page...
