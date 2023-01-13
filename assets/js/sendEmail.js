@@ -8,11 +8,12 @@ function sendMail(contact) {
         .then(
             function (response) {
                 console.log("SUCCESS", response);
-                setTimeout("location.href = '#contact_after_submit';", 10); // the user will know that their message was sent successfully and is given feedback.
+                setTimeout("location.href = '#contact_after_submit_successfully';", 10); // the user will know that their message was sent successfully and is given feedback.
                 document.getElementById("client_form").reset() // the form is reset after submit button is hit
             },
             function (error) {
                 console.log("FAILED", error);
+                setTimeout("location.href = '#contact_after_submit_error';", 10);
             }
         );
     return false; // To block from loading a new page...
