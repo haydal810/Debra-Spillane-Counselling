@@ -14,7 +14,7 @@ function sendMail(contact) {
             function (error) {
                 console.log("FAILED", error);
                 setTimeout("location.href = '#contact_after_submit_error';", 10);
-                alert("Error - Sorry. The Contact Form on this page is currently not working correctly. Please try again later");
+                alert(JSON.stringify(error))
             }
         );
     return false; // To block from loading a new page...
